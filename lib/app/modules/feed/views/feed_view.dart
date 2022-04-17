@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/splashscreen_controller.dart';
+import '../controllers/feed_controller.dart';
 
-class SplashscreenView extends GetView<SplashscreenController> {
+class FeedView extends GetView<FeedController> {
   @override
   Widget build(BuildContext context) {
-    print(controller.count);
     return Scaffold(
+      appBar: AppBar(
+        title: Text('FeedView'),
+        centerTitle: true,
+      ),
       body: Center(
         child: Text(
-          'SplashscreenView is working',
+          'FeedView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),
