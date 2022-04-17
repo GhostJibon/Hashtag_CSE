@@ -1,7 +1,10 @@
 import 'package:get/get.dart';
 
+import '../modules/activeperson/bindings/activeperson_binding.dart';
+import '../modules/activeperson/views/activeperson_view.dart';
+import '../modules/course/bindings/course_binding.dart';
+import '../modules/course/views/course_view.dart';
 import '../modules/feed/bindings/feed_binding.dart';
-import '../modules/feed/views/feed_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/joinoption/bindings/joinoption_binding.dart';
@@ -40,9 +43,14 @@ class AppPages {
       binding: LoginBinding(),
     ),
     GetPage(
-      name: _Paths.FEED,
-      page: () => FeedView(),
-      binding: FeedBinding(),
+      name: _Paths.COURSE,
+      page: () => CourseView(),
+      binding: CourseBinding(),
+    ),
+    GetPage(
+      name: _Paths.ACTIVEPERSON,
+      page: () => ActivepersonView(),
+      binding: ActivepersonBinding(),
     ),
   ];
 }

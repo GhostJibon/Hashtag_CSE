@@ -8,6 +8,8 @@ abstract class Routes {
   static const JOINOPTION = _Paths.JOINOPTION;
   static const LOGIN = _Paths.LOGIN;
   static const FEED = _Paths.FEED;
+  static const COURSE = _Paths.COURSE;
+  static const ACTIVEPERSON = _Paths.ACTIVEPERSON;
 }
 
 abstract class _Paths {
@@ -17,4 +19,6 @@ abstract class _Paths {
   static const JOINOPTION = '/joinoption';
   static const LOGIN = '/login';
   static const FEED = '/feed';
+  static const COURSE = '/course';
+  static const ACTIVEPERSON = '/activeperson';
 }

@@ -33,7 +33,7 @@ class JoinoptionView extends GetView<JoinoptionController> {
                 Get.toNamed(Routes.LOGIN);
               }),
               LoginOptions('Guest', () {
-                Get.toNamed(Routes.FEED);
+                Get.toNamed(Routes.HOME);
               }),
               Padding(
                 padding: EdgeInsets.only(top: 25.h),
