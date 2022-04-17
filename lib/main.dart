@@ -8,7 +8,7 @@ void main() {
     designSize: const Size(360, 690),
     minTextAdapt: true,
     splitScreenMode: true,
-    builder: () => GetMaterialApp(
+    builder: (ctx) => GetMaterialApp(
       title: "Application",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
