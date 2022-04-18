@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginOptions extends StatelessWidget {
-  LoginOptions(this.buttonname, this.ontap);
+class MainOptions extends StatelessWidget {
+  MainOptions(this.buttonname, this.ontap);
   final String buttonname;
   final Function() ontap;
   @override

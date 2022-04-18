@@ -4,6 +4,8 @@ import '../modules/activeperson/bindings/activeperson_binding.dart';
 import '../modules/activeperson/views/activeperson_view.dart';
 import '../modules/course/bindings/course_binding.dart';
 import '../modules/course/views/course_view.dart';
+import '../modules/couserquesrions/bindings/couserquesrions_binding.dart';
+import '../modules/couserquesrions/views/couserquesrions_view.dart';
 import '../modules/feed/bindings/feed_binding.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -51,6 +53,11 @@ class AppPages {
       name: _Paths.ACTIVEPERSON,
       page: () => ActivepersonView(),
       binding: ActivepersonBinding(),
+    ),
+    GetPage(
+      name: _Paths.COUSERQUESRIONS,
+      page: () => CourseQuestionsView(),
+      binding: CouserquesrionsBinding(),
     ),
   ];
 }

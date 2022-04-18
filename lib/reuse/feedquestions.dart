@@ -18,7 +18,7 @@ class PersonQuestion extends StatelessWidget {
       padding: EdgeInsets.only(left: 20.w, top: 5.h, bottom: 5.h, right: 20.w),
       child: GestureDetector(
         onTap: () {
-          Get.to(DirectMessage(personName, personProfilePic));
+          Get.to(DirectReply(personName, personProfilePic));
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

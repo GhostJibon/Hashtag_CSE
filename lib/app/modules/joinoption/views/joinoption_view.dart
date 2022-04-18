@@ -25,18 +25,18 @@ class JoinoptionView extends GetView<JoinoptionController> {
                       fontWeight: FontWeight.w600),
                 ),
               ),
-              LoginOptions('User', () {
+              MainOptions('User', () {
                 Get.toNamed(Routes.LOGIN);
               }),
-              LoginOptions('Admin', () {
+              MainOptions('Admin', () {
                 Get.toNamed(Routes.LOGIN);
               }),
-              LoginOptions('Guest', () {
+              MainOptions('Guest', () {
                 Get.toNamed(Routes.HOME);
               }),
               Padding(
                 padding: EdgeInsets.only(top: 25.h),
-                child: LoginOptions('Sign Up', () {
+                child: MainOptions('Sign Up', () {
                   Get.to(SignupviewView());
                 }),
               ),

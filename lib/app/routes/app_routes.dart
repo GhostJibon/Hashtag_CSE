@@ -10,6 +10,7 @@ abstract class Routes {
   static const FEED = _Paths.FEED;
   static const COURSE = _Paths.COURSE;
   static const ACTIVEPERSON = _Paths.ACTIVEPERSON;
+  static const COUSERQUESRIONS = _Paths.COUSERQUESRIONS;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const FEED = '/feed';
   static const COURSE = '/course';
   static const ACTIVEPERSON = '/activeperson';
+  static const COUSERQUESRIONS = '/couserquesrions';
 }

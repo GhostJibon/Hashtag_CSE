@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:hashtagcse/app/routes/app_pages.dart';
-import 'package:hashtagcse/reuse/addreply.dart';
+import 'package:hashtagcse/reuse/chaticons.dart';
 import 'package:hashtagcse/reuse/mprofile.dart';
-import 'package:hashtagcse/reuse/peoplesamswer.dart';
-import 'package:like_button/like_button.dart';
 
-class DirectReply extends StatelessWidget {
-  DirectReply(this.personname, this.profilepic);
+class DirectMessage extends StatelessWidget {
+  DirectMessage(this.personname, this.profilepic);
   final String personname;
   final String profilepic;
   @override
@@ -29,7 +26,7 @@ class DirectReply extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Get.offAndToNamed(Routes.HOME);
+                        Get.back();
                       },
                       child: Icon(
                         Icons.arrow_back_ios_new,
@@ -77,7 +74,7 @@ class DirectReply extends StatelessWidget {
                                     fontWeight: FontWeight.w500),
                               ),
                               Text(
-                                'DUI Student Question',
+                                'Direct Message',
                                 style: TextStyle(
                                     fontSize: 12.sp,
                                     fontWeight: FontWeight.w400),
@@ -89,57 +86,55 @@ class DirectReply extends StatelessWidget {
                     ),
                   ],
                 ),
-                Spacer(),
-                Padding(
-                    padding: EdgeInsets.only(right: 10.w),
-                    child: Icon(Icons.info)),
               ],
             ),
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding:
-              EdgeInsets.only(left: 10.w, right: 10.w, top: 15.h, bottom: 30.h),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+      body: Center(
+        child: Text(
+          'Message something',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.only(left: 20.w, right: 20.w),
+        child: SingleChildScrollView(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                child: Text(
-                  'I cant center a text file inside a row in flutter any idea what should i do? ',
-                  style: TextStyle(fontSize: 20.sp),
-                ),
-              ),
+              BottomIcons('assets/images/i1.png'),
+              BottomIcons('assets/images/i2.png'),
+              BottomIcons('assets/images/i3.png'),
+              BottomIcons('assets/images/i4.png'),
               Padding(
-                padding: EdgeInsets.only(top: 5.h, bottom: 20.h),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    LikeButton(
-                      circleColor: CircleColor(
-                          start: Color(0xff00ddff), end: Color(0xff0099cc)),
-                      bubblesColor: BubblesColor(
-                        dotPrimaryColor: Color(0xff33b5e5),
-                        dotSecondaryColor: Color(0xff0099cc),
+                padding: EdgeInsets.only(top: 1.h),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Color(0xffEEEEEE),
+                      borderRadius: BorderRadius.circular(20)),
+                  height: 28.h,
+                  width: 150.w,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(
+                          width: 0,
+                          style: BorderStyle.none,
+                        ),
+                      ),
+                      suffixIcon: Image.asset(
+                        'assets/images/i6.png',
+                        height: 25.w,
+                        width: 25.w,
                       ),
                     ),
-                    Icon(
-                      Icons.comment,
-                      color: Colors.grey,
-                    ),
-                    Text(
-                      '23' + ' Comments',
-                    )
-                  ],
+                  ),
                 ),
               ),
-              PeoplesAnswer(
-                  'assets/images/profilepic.png',
-                  'Amir Shenoy',
-                  'Try using the Center widget or Use mainaxix alignment center',
-                  '1h'),
-              AddAnswer('assets/images/profilepic.png'),
+              BottomIcons('assets/images/i5.png'),
             ],
           ),
         ),
