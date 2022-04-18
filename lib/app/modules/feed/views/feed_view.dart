@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
-
+import 'package:hashtagcse/reuse/feedquestions.dart';
 import '../controllers/feed_controller.dart';
 
 class FeedView extends GetView<FeedController> {
@@ -36,10 +35,20 @@ class FeedView extends GetView<FeedController> {
                         fontSize: 23.sp,
                         fontWeight: FontWeight.w700),
                   ),
-                )
+                ),
               ],
             ),
           ),
+          Column(
+            children: [
+              PersonQuestion('assets/images/profilepic.png', 'Istiak Jibon',
+                  'I need Help'),
+              PersonQuestion('assets/images/profilepic.png', 'Istiak Jibon',
+                  'I need Help'),
+              PersonQuestion('assets/images/profilepic.png', 'Istiak Jibon',
+                  'I need Help'),
+            ],
+          )
         ],
       )),
     );

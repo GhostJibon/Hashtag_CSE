@@ -1,9 +1,13 @@
+// ignore_for_file: import_of_legacy_library_into_null_safe
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:hashtagcse/reuse/directreply.dart';
+import 'package:like_button/like_button.dart';
 
-class Chatperson extends StatelessWidget {
-  Chatperson(this.personProfilePic, this.personName, this.personMessage);
+class PersonQuestion extends StatelessWidget {
+  PersonQuestion(this.personProfilePic, this.personName, this.personMessage);
   final String personProfilePic;
   final String personName;
   final String personMessage;
@@ -14,7 +18,7 @@ class Chatperson extends StatelessWidget {
       padding: EdgeInsets.only(left: 20.w, top: 5.h, bottom: 5.h, right: 20.w),
       child: GestureDetector(
         onTap: () {
-          // Get.to(DirectMessage(personName, personProfilePic));
+          Get.to(DirectMessage(personName, personProfilePic));
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,19 +42,6 @@ class Chatperson extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
-                          top: 35.h,
-                          left: 35.h,
-                          child: CircleAvatar(
-                            radius: 10.sp,
-                            backgroundColor: Colors.white,
-                            child: Center(
-                              child: CircleAvatar(
-                                radius: 8.sp,
-                                backgroundColor: Color(0xff36FF00),
-                              ),
-                            ),
-                          ))
                     ],
                   ),
                 ),
@@ -66,7 +57,7 @@ class Chatperson extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'You: ' + personMessage,
+                      'Asked about: ' + personMessage,
                       style: TextStyle(
                           fontSize: 15.sp, fontWeight: FontWeight.w400),
                     ),
@@ -74,12 +65,12 @@ class Chatperson extends StatelessWidget {
                 ),
               ],
             ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 15.h),
-              child: CircleAvatar(
-                backgroundColor: Colors.white,
-                radius: 6.h,
-                backgroundImage: AssetImage('assets/images/seenicon.png'),
+            LikeButton(
+              circleColor:
+                  CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+              bubblesColor: BubblesColor(
+                dotPrimaryColor: Color(0xff33b5e5),
+                dotSecondaryColor: Color(0xff0099cc),
               ),
             ),
           ],
