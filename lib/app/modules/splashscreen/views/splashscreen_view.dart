@@ -9,12 +9,9 @@ class SplashscreenView extends GetView<SplashscreenController> {
   Widget build(BuildContext context) {
     print(controller.count);
     return Scaffold(
-      body: Center(
-        child: Text(
-          'SplashscreenView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
+        backgroundColor: Color(0xffdfdfdf),
+        body: Image.asset(
+          'assets/images/logo.png',
+        ));
   }
 }

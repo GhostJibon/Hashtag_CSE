@@ -9,6 +9,7 @@ void main() {
     minTextAdapt: true,
     splitScreenMode: true,
     builder: (ctx) => GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Application",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
