@@ -77,7 +77,7 @@ class DirectReply extends StatelessWidget {
                                     fontWeight: FontWeight.w500),
                               ),
                               Text(
-                                'DUI Student Question',
+                                'DIU Student Question',
                                 style: TextStyle(
                                     fontSize: 12.sp,
                                     fontWeight: FontWeight.w400),
@@ -136,7 +136,7 @@ class DirectReply extends StatelessWidget {
               ),
               PeoplesAnswer(
                   'assets/images/profilepic.png',
-                  'Amir Shenoy',
+                  'Istiak Hossain',
                   'Try using the Center widget or Use mainaxix alignment center',
                   '1h'),
               AddAnswer('assets/images/profilepic.png'),
