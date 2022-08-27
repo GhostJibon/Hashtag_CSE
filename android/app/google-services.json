@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "771222571890",
+    "project_id": "hashtagcse-jibon",
+    "storage_bucket": "hashtagcse-jibon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771222571890:android:394ebe72abc82cb6a76beb",
+        "android_client_info": {
+          "package_name": "com.hashtag.cse.jibon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771222571890-4dfk384r5lkv3kp3ulueaf3cnd32i3bk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoueEFqs-WatCqVPyfjugbMJGK1y0ZEXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771222571890-4dfk384r5lkv3kp3ulueaf3cnd32i3bk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
